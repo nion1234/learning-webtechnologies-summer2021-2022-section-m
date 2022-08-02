@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta SrviceManshop.html</title>
+    <script type="text/javascript" src="https:coffee.js"></script>
+    <style>
+        td,th,table{border:thin solid black}
+    </style>
+</head>
+<body>
+    <form action="">
+        <h3>Order Form</h3>
+       
+        <table>
+           
+            <tr>
+                <th>Product Name</th>
+                <th>Price</th>
+                <th>Quantity</th>
+            </tr>
+
+            <tr>
+                <th>Transmission</th>
+                <td>$3.49</td>
+                <td><input type="text" id="french" size="2"></td>
+            </tr>
+            <tr>
+                <th>battery (1 lb.)</th>
+                <td>$3.95</td>
+                <td><input type="text" id="hazlenut" size="2"></td>
+            </tr>
+            <tr>
+                <th>Radiator</th>
+                <td>$4.49</td>
+                <td><input type="text" id="colombian" size="2"></td>
+            </tr>
+        </table>
+        
+        <p>
+            <input type="button" value="Total Cost" onclick="getCost()" >
+            <input type="text" size="5" id="cost" value="">
+        </p>
+        <!-- the submit and reset button -->
+        <p>
+            <input type="submit" value="Submit Order">
+            <input type="reset" value="Clear Order Form">
+        </p>
+    </form>
+   
+    
+    <script>
+
+function getCost(){
+    var TransmissionQty = document.getElementById('Transmission').value; 
+    var batteryQty = document.getElementById('battery').value;
+    var RadiatorQty = document.getElementById('Radiator').value;
+
+    var Transmission = 3.49;
+    var battery = 3.95;
+    var Radiator = 4.49;
+
+    var Transmission = frenchQty * frenchPrice; 
+    var battery = hazlenutQty * hazlenutPrice;
+    var Radiator = colombianQty * colombianPrice;
+    
+    var totalCost = french+hazlenut+colombian; 
+    
+    document.getElementById('cost').value="$"+totalCost;
+}
+    </script>
+</body>
+</html>
